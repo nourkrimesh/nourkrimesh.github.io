@@ -3,16 +3,16 @@
  *
  * ------------------------------------------------------------------- */
 
-(function($) {
+(function ($) {
 
     "use strict";
-    
+
     var cfg = {
-        scrollDuration : 800, // smoothscroll duration
-        mailChimpURL   : 'https://facebook.us8.list-manage.com/subscribe/post?u=cdb7b577e41181934ed6a6a44&amp;id=e6957d85dc'   // mailchimp url
+        scrollDuration: 800, // smoothscroll duration
+        mailChimpURL: 'https://facebook.us8.list-manage.com/subscribe/post?u=cdb7b577e41181934ed6a6a44&amp;id=e6957d85dc'   // mailchimp url
     },
 
-    $WIN = $(window);
+        $WIN = $(window);
 
     // Add the User Agent to the <html>
     // will be used for IE10 detection (Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0))
@@ -25,34 +25,34 @@
     }
 
 
-   /* Preloader
-    * -------------------------------------------------- */
-    var ssPreloader = function() {
-        
+    /* Preloader
+     * -------------------------------------------------- */
+    var ssPreloader = function () {
+
         $("html").addClass('ss-preload');
 
-        $WIN.on('load', function() {
+        $WIN.on('load', function () {
 
             // will first fade out the loading animation 
-            $("#loader").fadeOut("slow", function() {
+            $("#loader").fadeOut("slow", function () {
                 // will fade out the whole DIV that covers the website.
                 $("#preloader").delay(300).fadeOut("slow");
-            }); 
-            
+            });
+
             // for hero content animations 
             $("html").removeClass('ss-preload');
             $("html").addClass('ss-loaded');
-        
+
         });
     };
 
 
-   /* info toggle
-    * ------------------------------------------------------ */
-    var ssInfoToggle = function() {
+    /* info toggle
+     * ------------------------------------------------------ */
+    var ssInfoToggle = function () {
 
         //open/close lateral navigation
-        $('.info-toggle').on('click', function(event) {
+        $('.info-toggle').on('click', function (event) {
 
             event.preventDefault();
             $('body').toggleClass('info-is-visible');
@@ -62,10 +62,10 @@
     };
 
 
-   /* slick slider
-    * ------------------------------------------------------ */
-    var ssSlickSlider = function() {
-        
+    /* slick slider
+     * ------------------------------------------------------ */
+    var ssSlickSlider = function () {
+
         $('.home-slider').slick({
             arrows: false,
             dots: false,
@@ -78,44 +78,44 @@
     };
 
 
-   /* placeholder plugin settings
-    * ------------------------------------------------------ */
-    var ssPlaceholder = function() {
+    /* placeholder plugin settings
+     * ------------------------------------------------------ */
+    var ssPlaceholder = function () {
         $('input, textarea, select').placeholder();
     };
 
 
-   /* final countdown
-    * ------------------------------------------------------ */
-    var ssFinalCountdown = function() {
+    /* final countdown
+     * ------------------------------------------------------ */
+    var ssFinalCountdown = function () {
 
-        var finalDate =  new Date("April 15, 2023 15:00:00").getTime();
+        var finalDate = new Date("May 15, 2023 15:00:00").getTime();
         //-date: "Mar 25 2021",
 
         $('.home-content__clock').countdown(finalDate)
-        .on('update.countdown finish.countdown', function(event) {
+            .on('update.countdown finish.countdown', function (event) {
 
-            var str = '<div class=\"top\"><div class=\"time days\">' +
-                      '%D <span>day%!D</span>' + 
-                      '</div></div>' +
-                      '<div class=\"time hours\">' +
-                      '%H <span>H</span></div>' +
-                      '<div class=\"time minutes\">' +
-                      '%M <span>M</span></div>' +
-                      '<div class=\"time seconds\">' +
-                      '%S <span>S</span></div>';
+                var str = '<div class=\"top\"><div class=\"time days\">' +
+                    '%D <span>day%!D</span>' +
+                    '</div></div>' +
+                    '<div class=\"time hours\">' +
+                    '%H <span>H</span></div>' +
+                    '<div class=\"time minutes\">' +
+                    '%M <span>M</span></div>' +
+                    '<div class=\"time seconds\">' +
+                    '%S <span>S</span></div>';
 
-            $(this)
-            .html(event.strftime(str));
+                $(this)
+                    .html(event.strftime(str));
 
-        });
+            });
     };
 
 
-   /* AjaxChimp
-    * ------------------------------------------------------ */
-    var ssAjaxChimp = function() {
-        
+    /* AjaxChimp
+     * ------------------------------------------------------ */
+    var ssAjaxChimp = function () {
+
         $('#mc-form').ajaxChimp({
             language: 'es',
             url: cfg.mailChimpURL
@@ -144,10 +144,10 @@
     };
 
 
-   /* initialize
-    * ------------------------------------------------------ */
+    /* initialize
+     * ------------------------------------------------------ */
     (function ssInit() {
-        
+
         ssPreloader();
         ssInfoToggle();
         ssSlickSlider();

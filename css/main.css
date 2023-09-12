@@ -1522,7 +1522,7 @@ input::-moz-focus-inner {
   z-index: 502;
   font-size: 1.5rem;
   line-height: 1.8;
-  color: rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.5);
   padding: 30px 60px 42px;
   position: absolute;
   left: 0;

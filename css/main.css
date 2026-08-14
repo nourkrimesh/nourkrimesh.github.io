@@ -1323,7 +1323,7 @@ input::-moz-focus-inner {
   max-width: 1400px;
   padding-top: 15rem;
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .home-content__text p {
@@ -1481,7 +1481,7 @@ input::-moz-focus-inner {
 
 .home-social li {
   position: relative;
-  /* padding: .9rem 0; */
+  padding: .9rem 0;
 }
 
 .home-social li a {
@@ -1500,7 +1500,7 @@ input::-moz-focus-inner {
 }
 
 .home-social i {
-  font-size: 20px;
+  font-size: 32px;
   right: 0;
   text-align: center;
   display: inline-block;

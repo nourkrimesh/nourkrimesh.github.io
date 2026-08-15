@@ -1473,6 +1473,10 @@ input::-moz-focus-inner {
   /* transform: translate3d(0, -50%, 0); */
 }
 
+.home-social-mobile {
+  text-align: center;
+  display: none;
+}
 .home-social a {
   color: #FFFFFF;
   -webkit-transition: all 0.5s ease-in-out;
@@ -1901,6 +1905,10 @@ html.no-csstransitions .home-content__main {
 
   .home-social {
     display: none;
+  }
+
+  .home-social-mobile {
+    display: block;
   }
 
 }

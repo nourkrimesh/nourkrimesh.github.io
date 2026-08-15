@@ -1479,6 +1479,21 @@ input::-moz-focus-inner {
   transition: all 0.5s ease-in-out;
 }
 
+.home-social-mobile a {
+  color: #FFFFFF;
+  margin: 0 1.5rem;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.home-social-mobile i {
+  font-size: 20px;
+  right: 0;
+  text-align: center;
+  display: inline-block;
+  /* width: 36px; */
+  /* height: 36px; */
+}
+
 .home-social li {
   position: relative;
   padding: .9rem 0;
